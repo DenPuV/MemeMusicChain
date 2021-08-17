@@ -20,7 +20,7 @@ const pool = new Pool({
     host: '*',
     database: '*',
     password: '*',
-    port: *,
+    port: 5432,
 });
 
 var users = {};

@@ -133,7 +133,7 @@ const memeslist = new Vue({
             .catch(err => alert("Мемы не загрузились, патамушта " + err))
         },
         randomPage: function () {
-            fetch("https://purtov.top/api/getrandompage" + this.searchstring)
+            fetch("https://purtov.top/api/getrandompage")
             .then(res => { 
                 if(res.status !== 200) return;
                 return res.json();
