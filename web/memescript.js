@@ -149,7 +149,7 @@ const memeslist = new Vue({
             window.open("/redact?link=" + meme.page.id, "_self")
         },
         upChain: function () {
-            window.open("/?pageif=" + this.link, "_self")
+            window.open("/?pageid=" + this.link, "_self")
         },
     }
 });
