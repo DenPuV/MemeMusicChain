@@ -1,0 +1,15 @@
+.sidebar {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.main {
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.preview {
+    max-width: 100%;
+    max-height: 100%;
+}

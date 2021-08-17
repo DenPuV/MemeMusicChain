@@ -1,0 +1,19 @@
+{
+  "name": "memeapp",
+  "version": "1.0.0",
+  "description": "App for memes",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "DenPuV",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "password-hash": "^1.2.2",
+    "pg": "^8.7.1",
+    "uuid": "^8.3.2"
+  }
+}
