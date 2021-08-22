@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -16,11 +17,11 @@ const {
 const Pool = require('pg').Pool;
 const { request, response } = require("express");
 const pool = new Pool({
-    user: '*',
-    host: '*',
-    database: '*',
-    password: '*',
-    port: *,
+    user: process.env.POSTGRES_USER,
+    host: process.env.POSTGRES_HOST,
+    database: process.env.POSTGRES_DATABASE,
+    password: process.env.POSTGRES_PASSWORD,
+    port: process.env.POSTGRES_PORT,
 });
 
 var users = {};

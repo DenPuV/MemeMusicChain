@@ -21,6 +21,22 @@
     }
   }
 
+@media screen and (min-device-width: 600px) {
+    .sidebar {
+        width: 600px;
+    }
+
+    .menubtn {
+        left: 50%;
+        right: auto;
+    }
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 .sidebar {
     max-height: 350px;
     overflow-y: auto;
@@ -28,13 +44,14 @@
     background-color: #191919;
     color: white;
     z-index: 100;
+    border-radius: 0 0 15px 15px;
 }
 
 .menubtn {
     position: fixed;
     display: flex;
     z-index: 101;
-    left:50%;
+    right: 10%;
     margin-top: 10px;
     padding: 15px;
     background-color: white;
