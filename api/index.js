@@ -1,8 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
-const { response } = require("express");
+const { response, request } = require("express");
 const qs = require("./queries");
+const fs = require('fs')
 
 qs.syncUsers();
 const app = express();
@@ -18,6 +19,16 @@ app.use(cookieParser("MemeRadioSecret"));
 
 //app.get(('/', (request, response) => {  }))
 
+app.get('/api/getiptele', (request, response) => {
+    response.setHeader('Access-Control-Allow-Origin', '*');
+    response.setHeader('Access-Control-Allow-Headers', 'origin, content-type, accept');
+    fs.readFile('iptele.json', 'utf8' , (err, data) => {
+        if (err) {
+            response.status(400).json({error: 'File not found.'});
+        }
+            response.status(200).json(JSON.parse(data));
+      });
+});
 app.get('/api/getpages', qs.getPages);
 app.get('/api/getpage/:pageid', qs.getPage);
 app.get('/api/searchpage', qs.searchPage);
